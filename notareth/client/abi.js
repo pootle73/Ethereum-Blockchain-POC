@@ -1,0 +1,3 @@
+var abi = [{ "constant": false, "inputs": [{ "name": "logString", "type": "string" }], "name": "writeLog", "outputs": [{ "name": "", "type": "uint256" }], "payable": false, "type": "function" }, { "anonymous": false, "inputs": [{ "indexed": true, "name": "blockNumber", "type": "uint256" }, { "indexed": false, "name": "logString", "type": "string" }, { "indexed": false, "name": "sender", "type": "address" }], "name": "Log", "type": "event" }]
+web3.setProvider(new web3.providers.HttpProvider("http://localhost:8080"));
+loggerContract = web3.eth.contract(abi).at("0xc3c21092f76d4b60e43c0cdbcb43a4bedfb9c4210bd854f0677e8f971abacea7");
